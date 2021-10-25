@@ -68,9 +68,11 @@ function placeCard () {
 }
 
 
-function writeHtml() {
-    // employees[0] write manager card
-    // 
+function writeToFile(fileName, data) {
+    // makes file, if error occurs than console.log the error
+    fs.writeFile(fileName, data, (err) => {
+        err ? console.log(err) : console.log("Success! Your team is finished.")
+    })
 }
 
 function chooseMember(data) {
@@ -100,7 +102,9 @@ function chooseMember(data) {
     case "finished":
         console.log(employees)
         console.log("Success! Your team is finished.")
-        // fs to write an html and have css applied
+        console.log(employees[0].getRole())
+        // writeToFile("index.html", generateHtml(employees))
+        
     }
 }
 
