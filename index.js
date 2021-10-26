@@ -3,6 +3,7 @@ const fs = require('fs')
 const Manager = require('./lib/Manager.js')
 const Engineer = require('./lib/Engineer.js')
 const Intern = require('./lib/Intern.js')
+const renderHTML = require('./utils/generateHtml')
 
 const employees = []
 
@@ -103,7 +104,7 @@ function chooseMember(data) {
         console.log(employees)
         console.log("Success! Your team is finished.")
         console.log(employees[0].getRole())
-        // writeToFile("index.html", generateHtml(employees))
+        writeToFile("index.html", renderHTML(employees))
         
     }
 }
