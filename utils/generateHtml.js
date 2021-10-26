@@ -1,5 +1,5 @@
 
-
+// creates html for each employee role
 const manager = (employee) => {
     return `
     <div class="col">   
@@ -54,7 +54,7 @@ const intern = (employee) => {
     `
 }
 
-
+// loop through employees array and push the html for the type of role per object in array
 const renderHTML = (employees) => {
     pageArray = [];
     for (let i = 0; i < employees.length; i++) {
@@ -79,7 +79,7 @@ const renderHTML = (employees) => {
 }
 
 
-
+// creates the base html 
 const generateTeamPage = function (employeeCards) {
     return `
     <!DOCTYPE html>
