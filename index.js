@@ -64,10 +64,6 @@ const teamBuildQuestion = [{
     }
 ]
 
-function placeCard () {
-    // place card in body
-}
-
 
 function writeToFile(fileName, data) {
     // makes file, if error occurs than console.log the error
